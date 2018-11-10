@@ -1,0 +1,38 @@
+algoritmo "Super contador"
+var
+   opcao, inic, fim: Inteiro
+inicio
+      inic <- 1
+      fim <- 10
+      Repita
+            Escreval("=================")
+            Escreval("      MENU       ")
+            Escreval("=================")
+            Escreval("| [1] De 1 a 10 |")
+            Escreval("| [2] De 10 a 1 |")
+            Escreval("| [3] Sair      |")
+            Escreval("=================")
+            Escreva("Opção: ")
+            Leia(opcao)
+            Escolha(opcao)
+                          Caso 1
+                               Se (inic < fim) entao
+                                  Enquanto (inic <= fim) faca
+                                           Escreva(inic,".. ")
+                                           inic <- inic + 1
+                                  FimEnquanto
+                                  Escreval()
+                               FimSe
+                          Caso 2
+                               Se (fim > inic) entao
+                                  Enquanto (fim >= inic) faca
+                                           Escreva(fim,".. ")
+                                           fim <- fim - 1
+                                  FimEnquanto
+                                  Escreval()
+                               FimSe
+                          Caso 3
+                               Escreva("SAINDO...")
+            FimEscolha
+      Ate (opcao = 3)
+fimalgoritmo

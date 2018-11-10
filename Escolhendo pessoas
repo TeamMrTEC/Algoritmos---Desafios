@@ -1,0 +1,37 @@
+algoritmo "Escolhendo pessoas"
+var
+   sexo, r: Caractere
+   idade, cabelo, total_homens, total_mulheres: Inteiro
+inicio
+      Repita
+            Escreval("====================")
+            Escreval(" SELETOR DE PESSOAS ")
+            Escreval("====================")
+            Escreva("Qual o sexo [M/F]? ")
+            Leia(sexo)
+            Escreva("Qual a idade? ")
+            Leia(idade)
+            Escreval("Qual a cor do cabelo?")
+            Escreval("--------------------")
+            Escreval("[1] Preto")
+            Escreval("[2] Castanho")
+            Escreval("[3] Loiro")
+            Escreval("[4] Ruivo")
+            Escreva("Opção: ")
+            Leia(cabelo)
+            Se (sexo = "M") e (idade >= 18) e (idade < 25) e (cabelo = 2) entao
+               total_homens <- total_homens + 1
+            FimSe
+            Se (sexo = "F") e (idade >= 25) e (idade <= 30) e (cabelo = 3) entao
+               total_mulheres <- total_mulheres + 1
+            FimSe
+            Escreva("Quer continuar [S/N]? ")
+            Leia(r)
+            LimpaTela
+      Ate (r = "N")
+      Escreval("-------------------------------")
+      Escreval("RESULTADO FINAL")
+      Escreval("-------------------------------")
+      Escreval("Total de homens com mais de 18 e cabelos castanhos:", total_homens)
+      Escreval("Total de mulheres entre 25 e 30 e cabelos loiros:", total_mulheres)
+fimalgoritmo

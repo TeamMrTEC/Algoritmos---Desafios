@@ -1,0 +1,104 @@
+algoritmo "Dissecando matrizes"
+var
+   mat: vetor[1..4, 1..4] de Inteiro
+   i, j, opcao: Inteiro
+Procedimento Matrizes(alt: Inteiro)
+inicio
+      Se (alt = 1) entao
+         Para i <- 1 ate 4 faca
+              Para j <- 1 ate 4 faca
+                   Escreva(mat[i,j])
+              FimPara
+              Escreval()
+         FimPara
+      FimSe
+      Se (alt = 2) entao
+         Para i <- 1 ate 4 faca
+              Para j <- 1 ate 4 faca
+                   Se (i = j) entao
+                      Escreva(mat[i,j])
+                   Senao
+                      Escreva("":2)
+                   FimSe
+              FimPara
+              Escreval()
+         FimPara
+      FimSe
+      Se (alt = 3) entao
+         Para i <- 1 ate 4 faca
+              Para j <- 1 ate 4 faca
+                   Se (i = 1) entao
+                      Se (j = 1) entao
+                         Escreva("":2)
+                      Senao
+                         Escreva(mat[i,j])
+                      FimSe
+                   FimSe
+                   Se (i = 2) entao
+                      Se (j = 1) ou (j = 2) entao
+                         Escreva("":2)
+                      Senao
+                         Escreva(mat[i,j])
+                      FimSe
+                   FimSe
+                   Se (i = 3) entao
+                      Se (j <> 4) entao
+                         Escreva("":2)
+                      Senao
+                         Escreva(mat[i,j])
+                      FimSe
+                   FimSe
+              FimPara
+              Escreval()
+         FimPara
+      FimSe
+      Se (alt = 4) entao
+         Para i <- 1 ate 4 faca
+              Para j <- 1 ate 4 faca
+                   Se (i = 2) entao
+                      Se (j <> 1) entao
+                         Escreva("":2)
+                      Senao
+                         Escreva(mat[i,j])
+                      FimSe
+                   FimSe
+                   Se (i = 3) entao
+                      Se (j = 1) ou (j = 2) entao
+                         Escreva(mat[i,j])
+                      Senao
+                         Escreva("":2)
+                      FimSe
+                   FimSe
+                   Se (i = 4) entao
+                      Se (j <> 4) entao
+                         Escreva(mat[i,j])
+                      Senao
+                         Escreva("":2)
+                      FimSe
+                   FimSe
+              FimPara
+              Escreval()
+         FimPara
+      FimSe
+FimProcedimento
+inicio
+      Para i <- 1 ate 4 faca
+           Para j <- 1 ate 4 faca
+                Leia(mat[i,j])
+           FimPara
+      FimPara
+      Repita
+          Matrizes(opcao)
+          Escreval("MENU DE OPÇÕES")
+          Escreval("==================")
+          Escreval("[1] Mostrar a matriz")
+          Escreval("[2] Diagonal princípal")
+          Escreval("[3] Triângulo Superior")
+          Escreval("[4] Triângulo Inferior")
+          Escreval("[5] Sair")
+          Escreva("----> Opção: ")
+          Leia(opcao)
+          LimpaTela
+      Ate (opcao = 5)
+      Escreva("Programa finalizado...")
+fimalgoritmo

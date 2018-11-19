@@ -1,0 +1,26 @@
+algoritmo "Analisador de valores"
+var
+   i, v, soma, multi5, soma_par, nulo: Inteiro
+   media: Real
+inicio
+      Para i <- 1 ate 5 faca
+           Escreva("Digite o",i,"º valor: ")
+           Leia(v)
+           soma <- soma + v
+           media <- soma/i
+           Se (v % 5 = 0) entao
+              multi5 <- multi5 + 1
+           FimSe
+           Se (v = 0) entao
+              nulo <- nulo + 1
+           FimSe
+           Se (v % 2 = 0) entao
+              soma_par <- soma_par + v
+           FimSe
+      FimPara
+      Escreval("A soma entre os valores é:", soma)
+      Escreval("A média entre os valores é:", media)
+      Escreval("Valores divisíveis por 5:", multi5)
+      Escreval("Valores nulos:", nulo)
+      Escreval("A soma dos valores pares é:", soma_par)
+fimalgoritmo

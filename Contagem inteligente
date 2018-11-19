@@ -1,0 +1,24 @@
+algoritmo "Contagem inteligente"
+var
+   inic, fim: Inteiro
+inicio
+      Escreval("CONTEGEM INTELIGENTE")
+      Escreva("Início: ")
+      Leia(inic)
+      Escreva("Fim: ")
+      Leia(fim)
+      Escreval("--------------------")
+      Escreval("      CONTANDO      ")
+      Escreval("--------------------")
+      Se (inic < fim) entao
+         Enquanto (inic <= fim) faca
+                 Escreva(inic,".. ")
+                 inic <- inic + 1
+         FimEnquanto
+      Senao
+         Enquanto (inic >= fim) faca
+                 Escreva(inic,".. ")
+                 inic <- inic - 1
+         FimEnquanto
+      FimSe
+fimalgoritmo

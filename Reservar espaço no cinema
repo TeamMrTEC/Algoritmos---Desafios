@@ -1,0 +1,89 @@
+algoritmo "semnome"
+var
+   assento: vetor[1..7] de Caractere
+   R, cadeira: Caractere
+   i: Inteiro
+inicio
+      assento[1] <- "B1"
+      assento[2] <- "B2"
+      assento[3] <- "B3"
+      assento[4] <- "B4"
+      assento[5] <- "B5"
+      assento[6] <- "B6"
+      assento[7] <- "B7"
+      Repita
+            R <- ""
+            Para i <- 1 ate 7 faca
+                Escreva("[",assento[i],"]":1 )
+            FimPara
+            Escreval()
+            Escreval("-----------------------------")
+            Escreva("Reservar a cadeira: ")
+            Leia(cadeira)
+            Se (cadeira <> "B1") e (cadeira <> "B2") e (cadeira <> "B3") e (cadeira <> "B3") e (cadeira <> "B4") e (cadeira <> "B5") e (cadeira <> "B6") e (cadeira <> "B7") entao
+               Escreval("Cadeira inexistente! Digite ENTER para tentar novamente.")
+               R <- "S"
+            FimSe
+            Se (cadeira = "B1") e (assento[1] = "--") entao
+               Escreval("ERRO: Lugar Ocupado!")
+            Senao
+                 Se (cadeira = "B1") entao
+                    Escreval("Cadeira ",cadeira," reservada!")
+                    assento[1] <- "--"
+                 FimSe
+            FimSe
+            Se (cadeira = "B2") e (assento[2] = "--") entao
+               Escreval("ERRO: Lugar Ocupado!")
+            Senao
+                 Se (cadeira = "B2") entao
+                    Escreval("Cadeira ",cadeira," reservada!")
+                    assento[2] <- "--"
+                 FimSe
+            FimSe
+            Se (cadeira = "B3") e (assento[3] = "--") entao
+               Escreval("ERRO: Lugar Ocupado!")
+            Senao
+                 Se (cadeira = "B3") entao
+                    Escreval("Cadeira ",cadeira," reservada!")
+                    assento[3] <- "--"
+                 FimSe
+            FimSe
+            Se (cadeira = "B4") e (assento[4] = "--") entao
+               Escreval("ERRO: Lugar Ocupado!")
+            Senao
+                 Se (cadeira = "B4") entao
+                    Escreval("Cadeira ",cadeira," reservada!")
+                    assento[4] <- "--"
+                 FimSe
+            FimSe
+            Se (cadeira = "B5") e (assento[5] = "--") entao
+               Escreval("ERRO: Lugar Ocupado!")
+            Senao
+                 Se (cadeira = "B5") entao
+                    Escreval("Cadeira ",cadeira," reservada!")
+                    assento[5] <- "--"
+                 FimSe
+            FimSe
+            Se (cadeira = "B6") e (assento[6] = "--") entao
+               Escreval("ERRO: Lugar Ocupado!")
+            Senao
+                 Se (cadeira = "B6") entao
+                    Escreval("Cadeira ",cadeira," reservada!")
+                    assento[6] <- "--"
+                 FimSe
+            FimSe
+            Se (cadeira = "B7") e (assento[7] = "--") entao
+               Escreval("ERRO: Lugar Ocupado!")
+            Senao
+                 Se (cadeira = "B7") entao
+                    Escreval("Cadeira ",cadeira," reservada!")
+                    assento[7] <- "--"
+                 FimSe
+            FimSe
+            Se (R = "") entao
+               Escreva("Quer reservar outra cadeira [S/N]? ")
+            FimSe
+            Leia(R)
+            LimpaTela
+      Ate (R = "N")
+fimalgoritmo
